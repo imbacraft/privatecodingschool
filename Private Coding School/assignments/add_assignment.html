@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Private School - Assignments</title>
+    
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+
+</head>
+<body onload="createAssignmentTable()">
+
+    <div class= "container">
+  <div class= "header">
+    <header>
+      <h1>Private Coding School Administration</h1>
+
+       <nav>
+        <div class="navbar">
+            
+          <div> <a href="../index.html">Home</a> </div>
+            
+          <div class = "dropdown">
+            <button class="dropbtn">Courses</button>
+          <div class = "dropdown-content">
+            <a href="../courses/coursetable.html">Courses List</a>
+            <a href="../courses/add_course.html">Add Course</a>
+            <a href="../courses/edit_update_course.html">Edit/Update Course</a>
+            <a href="../courses/delete_course.html">Delete Course</a>
+          </div>
+          </div>
+
+          <div class = "dropdown">
+            <button class="dropbtn">Trainers</button>
+          <div class = "dropdown-content">
+            <a href="../trainers/trainerlist.html">Trainer List</a>
+            <a href="../trainers/add_trainer.html">Add Trainer</a>
+            <a href="../trainers/edit_update_trainer.html">Edit/Update Trainer</a>
+            <a href="../trainers/delete_trainer.html">Delete Trainer</a>
+          </div>
+          </div>
+
+          <div class = "dropdown">
+            <button class="dropbtn">Trainers per Course</button>
+          <div class = "dropdown-content">
+            <a href="../trainerpercourse/trainerpercoursetable.html">Trainers per Course List</a>
+            <a href="../trainerpercourse/assign_trainerpercourse.html">Assign Trainer to a Course</a>
+            <a href="../trainerpercourse/delete_trainerpercourse.html">Delete Trainer per Course</a>
+          </div>
+          </div>
+
+          <div class = "dropdown">
+            <button class="dropbtn">Students</button>
+          <div class = "dropdown-content">
+            <a href="../students/studenttable.html">Student List</a>
+            <a href="../students/add_student.html">Add Student</a>
+            <a href="../students/edit_update_student.html">Edit/Update Student</a>
+            <a href="../students/delete_student.html">Delete Student</a>
+          </div>
+          </div>
+
+          <div class = "dropdown">
+            <button class="dropbtn">Students per Course</button>
+          <div class = "dropdown-content">
+            <a href="../studentpercourse/studentpercoursetable.html">Students per Course List</a>
+            <a href="../studentpercourse/assign_studentpercourse.html">Assign Student to a Course</a>
+            <a href="../studentpercourse/delete_studentpercourse.html">Delete Student per Course</a>
+          </div>
+          </div>
+
+          <div class = "dropdown">
+            <button class="dropbtn">Assignments</button>
+          <div class = "dropdown-content">
+            <a href="../assignments/assignmenttable.html">Assignment List</a>
+            <a href="../assignments/add_assignment.html">Add Assignment</a>
+            <a href="../assignments/edit_update_assignment.html">Edit/Update Assignment</a>
+            <a href="../assignments/delete_assignment.html">Delete Assignment</a>
+          </div>
+        </div>
+          
+        <div class = "dropdown">
+          <button class="dropbtn">Assignments per Course</button>
+        <div class = "dropdown-content">
+          <a href="../assignmentspercourse/assignmentspercoursetable.html">Assignments per Course List</a>
+          <a href="../assignmentspercourse/assign_assignmentpercourse.html">Assign Assignment to a Course</a>
+          <a href="../assignmentspercourse/delete_assignmentpercourse.html">Delete Assignment per Course</a>
+        </div>
+        </div>
+
+        <div class = "dropdown">
+          <button class="dropbtn">Assignments per Student per Course</button>
+        <div class = "dropdown-content">
+          <a href="../assignmentsperstudentpercourse.html/assignmentperstudentpercoursetable.html">Assignments per Student per Course List</a>
+          <a href="../assignmentsperstudentpercourse.html/assign_assignmentperstudentpercourse.html">Assign Assignment to a Student per Course</a>
+          <a href="../assignmentsperstudentpercourse.html/delete_assignmentperstudentpercourse.html">Delete Assignment per Student per Course</a>
+        </div>
+        </div>
+            
+        </div>
+    </nav>
+    </header>
+  </div>
+
+
+
+  <div class= "panleft">
+<h2>
+    Add New Assignment Form
+  </h2>
+ 
+
+    <form onsubmit=handleAddAssignmentForm() id="addassignmentform" class="form">
+        
+        <fieldset >
+        
+            <p>
+                <strong>Title:</strong>  
+                <input type="text"  name="title" id="title" maxlength="20" placeholder="Type Assignment Title" required />
+            </p>
+            
+            <p>
+                <strong>Description:</strong>  
+                <input type ="text" name="description" id="description" maxlength="150" placeholder="Type Assignment Description" required/>
+            </p>
+
+            <p>
+                <strong>Submission Date:</strong>  
+                <input type="date" name="subdate" id="subdate" required/>
+            </p>
+
+            <p>
+                <strong>Oral Mark:</strong>  
+                <input type ="number" min="1", max="100" name="oralmark" id="oralmark" maxlength="150" placeholder="Type Assignment Oral Mark" required/>
+            </p>
+
+        <button type="submit" form="addassignmentform">Add Assignment</button>
+
+    </fieldset>
+    </form>
+
+  </div>
+
+  <div class= "mainbody">
+<main>
+
+
+<table class= "formtable", id = "assignmentlist">
+  <h2>
+    Here is a list of the current Assignments:
+  </h2>
+      <thead>
+        <tr>
+            <th>Nr.</th>
+            <th>Title </th>
+            <th>Description</th>
+            <th>Submission Date <br>(yyyy-mm-dd)</th>
+            <th>Oral Mark </th>
+            <th>Total Mark</th>
+        </tr>
+     
+    </table>
+</main>
+</div>
+  
+ 
+<div class="panright">
+</div>
+
+<div class = "footer">
+
+  <footer>Private School Copyright &copy; 2021</footer>
+</div>
+
+
+    </div>
+</body> 
+
+</html>
